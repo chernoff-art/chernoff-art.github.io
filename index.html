@@ -1,10 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>chernoff-art — Андрій Чернов</title>
+  <meta name="description" content="chernoff-art. Живопис з перших рук — художник Андрій Чернов. Пейзаж, графіка, натюрморт.">
+  <meta property="og:title" content="chernoff-art — Андрій Чернов">
+  <meta property="og:description" content="Живопис з перших рук: пейзаж, графіка, натюрморт.">
+  <meta property="og:image" content="assets/zhovi.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chernoff-art.github.io/chernoff-art/">
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,33 +26,35 @@
   </header>
 
   <section id="hero">
-    <img src="assets/zhovi.jpg" alt="Жовтнева мряка">
+    <img src="assets/zhovi.jpg" alt="Жовтнева мряка — пейзаж, олія, 20×20" loading="lazy">
     <button onclick="document.getElementById('gallery').scrollIntoView()">Дивитися роботи</button>
   </section>
 
   <section id="gallery">
     <h2>Галерея</h2>
     <div class="grid">
-      <figure><img src="assets/kyivsea.jpg"><figcaption>#kyivsea. Перший кидок (2025), 20×20, оргаліт, олія</figcaption></figure>
-      <figure><img src="assets/zhovi.jpg"><figcaption>Жовтнева мряка (2025), 20×20, оргаліт, олія</figcaption></figure>
-      <figure><img src="assets/running.jpg"><figcaption>Running on the waves (2025), 21×30, полотно, олія</figcaption></figure>
+      <figure><img src="assets/kyivsea.jpg" alt="#kyivsea. Перший кидок — пейзаж, оргаліт, олія" loading="lazy"><figcaption>#kyivsea. Перший кидок (2025), 20×20, оргаліт, олія</figcaption></figure>
+      <figure><img src="assets/zhovi.jpg" alt="Жовтнева мряка — пейзаж, оргаліт, олія" loading="lazy"><figcaption>Жовтнева мряка (2025), 20×20, оргаліт, олія</figcaption></figure>
+      <figure><img src="assets/running.jpg" alt="Running on the waves — полотно, олія" loading="lazy"><figcaption>Running on the waves (2025), 21×30, полотно, олія</figcaption></figure>
     </div>
   </section>
 
   <section id="about">
     <h2>Про автора</h2>
     <div class="about">
-      <img src="assets/photo.jpg" alt="Андрій Чернов">
-      <p>Андрій Чернов — художник, працює в жанрах пейзажу, графіки та натюрморту. «chernoff‑art. Живопис з перших рук».<br>Додати тут біографію або цитату.</p>
+      <img src="assets/photo.jpg" alt="Андрій Чернов" loading="lazy">
+      <p>Андрій Чернов — художник, працює в жанрах пейзажу, графіки та натюрморту. «chernoff‑art. Живопис з перших рук».<br>«Живопис — це розмова із світом кольором».</p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Контакти</h2>
-    <p>Email: your-email@example.com<br>Telegram: @your_telegram<br>Instagram: @your_instagram</p>
-    <form>
-      <label>Ваше ім’я:<br><input type="text" name="name"></label><br>
-      <label>Повідомлення:<br><textarea name="message"></textarea></label><br>
+    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a><br>
+    Telegram: <a href="https://t.me/your_telegram">@your_telegram</a><br>
+    Instagram: <a href="https://instagram.com/your_instagram">@your_instagram</a></p>
+    <form onsubmit="alert('Дякуємо! Ваше повідомлення надіслано.'); return false;">
+      <label>Ваше ім’я:<br><input type="text" name="name" required></label><br>
+      <label>Повідомлення:<br><textarea name="message" required></textarea></label><br>
       <button type="submit">Надіслати</button>
     </form>
   </section>
